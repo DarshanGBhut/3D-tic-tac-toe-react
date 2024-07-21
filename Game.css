@@ -1,0 +1,84 @@
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.game > div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid #4CAF50; 
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 8px; 
+}
+
+input[type="radio"] + span::after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #4CAF50; 
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s;
+}
+
+input[type="radio"]:checked + span::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+label .label-text {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.winner {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #4CAF50; 
+  text-align: center;
+}
+
+.winner button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #4CAF50; 
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.winner button:hover {
+  background-color: #45a049; 
+}
